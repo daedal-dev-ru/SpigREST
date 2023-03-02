@@ -1,0 +1,30 @@
+name: SpigREST
+version: '1.0'
+main: ru.daedal_dev.spigrestbukkit.SpigrestBukkit
+prefix: SpigREST
+authors: [ Daedal ]
+softdepend:
+  - AureliumSkills
+  - AuthMe
+  - BetonQuest
+  - CMI
+  - CoreProtect
+  - CombatLogX
+  - CrazyAuctions
+  - CrazyVouchers
+  - Duels
+  - Dynmap
+  - DiscordSRV
+  - EssentialsX
+  - LuckPerms
+  - Parties
+  - PlasmoVoice
+  - SkinSrestorer
+  - spark
+  - TradeSystem
+  - Towny
+  - Vault
+  - VillagerMarket
+  - QualityArmory
+  - WorldGuard
+website: vk.com/daedal_dev
