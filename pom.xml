@@ -8,9 +8,149 @@
     <artifactId>spigrest</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>bukkit</module>
+        <module>bungee</module>
+        <module>sponge</module>
+        <module>velocity</module>
+    </modules>
+
     <properties>
+        <!-- Java version -->
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <!-- Server cores -->
+        <core.paper.version>1.12.2-R0.1-SNAPSHOT</core.paper.version>
+        <core.bungee.version>1.12-SNAPSHOT</core.bungee.version>
+        <!-- Development -->
+        <dev.spark.version>2.9.4</dev.spark.version>
+        <dev.lombok.version>1.18.26</dev.lombok.version>
+        <dev.ormlite.version>6.0</dev.ormlite.version>
+        <!-- Plugin hooks -->
+        <plugin.aureliumskills.version>Beta1.3.14</plugin.aureliumskills.version>
+        <plugin.authme.version>5.6.0-SNAPSHOT</plugin.authme.version>
+        <plugin.betonquest.version>2.0.0-SNAPSHOT</plugin.betonquest.version>
+        <plugin.coreprotect.version>21.3</plugin.coreprotect.version>
+        <plugin.combatlogx.version>11.2-SNAPSHOT</plugin.combatlogx.version>
+        <plugin.crazyauctions.version>1.2.17</plugin.crazyauctions.version>
+        <plugin.crazyvouchers.version>2.9.11</plugin.crazyvouchers.version>
+        <plugin.duels.version>3.5.1</plugin.duels.version>
+        <plugin.dynmap.version>3.4</plugin.dynmap.version>
+        <plugin.discordsrv.version>1.26.0</plugin.discordsrv.version>
+        <plugin.essentials.version>2.19.0</plugin.essentials.version>
+        <plugin.luckperms.version>5.4</plugin.luckperms.version>
+        <plugin.parties.version>2.5.2</plugin.parties.version>
+        <plugin.plasmovoice.version>1.0.11</plugin.plasmovoice.version>
+        <plugin.skinsrestorer.version>14.2.8</plugin.skinsrestorer.version>
+        <plugin.spark.version>0.1-SNAPSHOT</plugin.spark.version>
+        <plugin.tradesystem.version>v2.2.0</plugin.tradesystem.version>
+        <plugin.towny.version>0.98.5.0</plugin.towny.version>
+        <plugin.vault.version>1.7</plugin.vault.version>
+        <plugin.villagermarket.version>1.10.5</plugin.villagermarket.version>
+        <plugin.qualityarmory.version>v2.0.7</plugin.qualityarmory.version>
+        <plugin.worldguard.version>7.0.5</plugin.worldguard.version>
     </properties>
-    
+
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+        <repository>
+            <id>essentials-releases</id>
+            <url>https://repo.essentialsx.net/releases/</url>
+        </repository>
+        <repository>
+            <id>plasmo-repo</id>
+            <url>https://repo.plo.su</url>
+        </repository>
+        <repository>
+            <id>papermc-repo</id>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
+        </repository>
+        <repository>
+            <id>codemc-repo</id>
+            <url>https://repo.codemc.org/repository/maven-public/</url>
+        </repository>
+        <repository>
+            <id>betonquest-repo</id>
+            <url>https://betonquest.org/nexus/repository/betonquest/</url>
+        </repository>
+        <repository>
+            <id>playpro-repo</id>
+            <url>https://maven.playpro.com</url>
+        </repository>
+        <repository>
+            <id>sirblobman-public</id>
+            <url>https://nexus.sirblobman.xyz/repository/public/</url>
+        </repository>
+        <repository>
+            <id>MikeRepo</id>
+            <url>https://repo.mikeprimm.com/</url>
+        </repository>
+        <repository>
+            <id>sonatype</id>
+            <url>https://oss.sonatype.org/content/groups/public/</url>
+        </repository>
+        <repository>
+            <id>sonatype-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>
+        <repository>
+            <id>dv8tion</id>
+            <name>m2-dv8tion</name>
+            <url>https://m2.dv8tion.net/releases</url>
+        </repository>
+        <repository>
+            <id>Scarsz-Nexus</id>
+            <url>https://nexus.scarsz.me/content/groups/public/</url>
+        </repository>
+        <repository>
+            <id>alessiodp-repo</id>
+            <url>https://repo.alessiodp.com/releases/</url>
+        </repository>
+        <repository>
+            <id>glaremasters repo</id>
+            <url>https://repo.glaremasters.me/repository/towny/</url>
+        </repository>
+    </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>com.sparkjava</groupId>
+            <artifactId>spark-core</artifactId>
+            <version>${dev.spark.version}</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${dev.lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.j256.ormlite</groupId>
+            <artifactId>ormlite-jdbc</artifactId>
+            <version>${dev.ormlite.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.skinsrestorer</groupId>
+            <artifactId>skinsrestorer-api</artifactId>
+            <version>${plugin.skinsrestorer.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.alessiodp.parties</groupId>
+            <artifactId>parties-api</artifactId>
+            <version>${plugin.parties.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>me.lucko</groupId>
+            <artifactId>spark-api</artifactId>
+            <version>${plugin.spark.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 </project>

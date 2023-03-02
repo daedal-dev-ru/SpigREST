@@ -1,0 +1,77 @@
+server:
+  # Порт веб-сервера плагина
+  port: 8080
+  # Максимальное количество потоков
+  maxThreads: 2
+
+# Использовать аутентификацию для доступа
+# ВНИМАНИЕ: ОТКЛЮЧАЙТЕ ДАННЫЙ ПАРАМЕТР ТОЛЬКО В ТОМ СЛУЧАЕ, ЕСЛИ ВЫ ЗНАЕТЕ ЧТО ДЕЛАЕТЕ, ИЛИ ВАШЕ
+# API НЕ ДОСТУПНО ПУБЛИЧНО (В ДАННОМ СЛУЧАЕ ВСЁ РАВНО РЕКОМЕНДУЕТСЯ ИСПОЛЬЗОВАТЬ АУТЕНТИФИКАЦИЮ)
+authentication: true
+
+# Сообщения плагина
+messages:
+  plugin:
+    disabled: "&cПлагин выключен."
+    enabled: "&aПлагин запущен за %s мс!"
+  logging:
+    # Логгирование обращений к API
+    # Рекомендуется оставить включенным для расследования инцидентов или попыток взлома
+    enabled: true
+    log:
+      title_start:
+        enabled: true
+        msg: "&e------- Spig&6&lREST LOG START &e-------"
+      desc:
+        enabled: true
+        msg: "&eReceived API call from IP &6%s"
+      url:
+        enabled: true
+        msg: "&eURL: &6%s"
+      method:
+        enabled: true
+        msg: "&eMethod: &6%s"
+      protocol:
+        enabled: true
+        msg: "&eProtocol: &6%s"
+      headers:
+        enabled: true
+        msg: "&eHeaders: &6%s"
+      cookies:
+        enabled: true
+        msg: "&eCookies: &6%s"
+      params:
+        enabled: true
+        msg: "&eParams: &6%s"
+      title_end:
+        enabled: true
+        msg: "&e------- Spig&6&lREST LOG END &e-------"
+
+# Интеграции с другими плагинами, позволяющие имплементировать управление ими извне посредством REST API.
+hooks:
+  AureliumSkills: false
+  AuthMe: false
+  BetonQuest: false
+  # Основные методы взаимодействия с сервером и сущностями через Bukkit API
+  Bukkit: true
+  CoreProtect: false
+  CombatLogX: false
+  CrazyAuctions: false
+  CrazyVoucher: false
+  Duels: false
+  Dynmap: false
+  DiscordSRV: false
+  EdemNations: false
+  EssentialsX: false
+  LuckPerms: false
+  Parties: false
+  PlasmoVoice: false
+  SkinSrestorer: false
+  spark: false
+  TradeSystem: false
+  Towny: false
+  Vault: false
+  VillagerMarket: false
+  QualityArmory: false
+  WorldGuard: false
+methods:
